@@ -19,4 +19,11 @@ app.get('/', function (req, res) {
 
 server = http.createServer(app); // Create an HTTP server.
 server.listen(process.env.PORT || 4000); // Listen on the default port, or on 4000 if there's not one.
+
+var io = require('socket.io').listen(server);
+
+io.sockets.on('connection', function(socket) {
+    socket.emit('connected');
+});
+
 console.log('Hello')

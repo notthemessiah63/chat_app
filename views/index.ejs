@@ -3,6 +3,7 @@ echo "<h1>Hello world!</h1>" > views/index.ejs
   <head>
     <title>GAChat with web sockets</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="public/app.js"></script>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
@@ -16,5 +17,6 @@ echo "<h1>Hello world!</h1>" > views/index.ejs
       <input type="submit" value="Speak!" disabled="disabled" />
     </form>
   </body>
+  <script src="/socket.io/socket.io.js"></script>
 
 </html>
